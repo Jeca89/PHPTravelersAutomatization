@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { validationMessages} from '../fixtures/validationMessages.json';
+
 import { header} from '../page_object/authHeader';
 import { registrationPage } from '../page_object/authRegister';
 
@@ -9,12 +9,12 @@ const faker = require('faker');
 describe("POM Registration test", () =>{
 
     let invalidUserData = {
-        emailMissingAtSign: 'jeca_ceca89hotmail.com',
-        emailMissingDotCom: 'jeca_ceca89@hotmail',
-        emailMissingDot: 'jeca_ceca89@hotmailcom',
-        email2Dots: 'jeca_ceca89@hotmail..com',
-        emailDotBeforeAt: 'jeca_ceca89.@hotmail.com',
-        takenEmail: 'jeca_ceca89@hotmail.com'
+        emailMissingAtSign: 'jelena.marko2013gmail.com',
+        emailMissingDotCom: 'jelena.marko2013@gmail',
+        emailMissingDot: 'jelena.marko2013@gmailcom',
+        email2Dots: 'jelena.marko2013@gmail..com',
+        emailDotBeforeAt: 'jelena.marko2013.@hotmail.com',
+        takenEmail: 'jelena.marko2013@gmail.com'
     }
 
     let userData = {
@@ -32,7 +32,7 @@ describe("POM Registration test", () =>{
     }
 
     before('visit app', () => {
-        cy.visit('/');
+        cy.visit('https://phptravels.com/');
         cy.url().should('contains', 'phptravels')
     });
 
